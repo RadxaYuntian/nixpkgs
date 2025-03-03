@@ -157,6 +157,13 @@ in
     filesToInstall = [ "build/${platform}/release/bl31.bin" ];
   };
 
+  armTrustedFirmwareAmlogicG12A = buildArmTrustedFirmware rec {
+    extraMakeFlags = [ "bl31" ];
+    platform = "g12a";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    filesToInstall = [ "build/${platform}/release/bl31.bin" ];
+  };
+
   armTrustedFirmwareQemu = buildArmTrustedFirmware rec {
     platform = "qemu";
     extraMeta.platforms = [ "aarch64-linux" ];
