@@ -11377,6 +11377,7 @@ with pkgs;
     ubootRock64
     ubootRock64v2
     ubootRockPiE
+    ubootRockPiEv3
     ubootRockPiS
     ubootRockPi4
     ubootRockPro64

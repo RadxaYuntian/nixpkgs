@@ -765,6 +765,17 @@ in
     ];
   };
 
+  ubootRockPiEv3 = buildUBoot {
+    defconfig = "rock-pi-e-v3-rk3328_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    BL31 = "${armTrustedFirmwareRK3328}/bl31.elf";
+    filesToInstall = [
+      "u-boot.itb"
+      "idbloader.img"
+      "u-boot-rockchip.bin"
+    ];
+  };
+
   ubootRockPro64 = buildUBoot {
     defconfig = "rockpro64-rk3399_defconfig";
     extraMeta.platforms = [ "aarch64-linux" ];
