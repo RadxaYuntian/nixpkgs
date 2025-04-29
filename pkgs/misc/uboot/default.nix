@@ -657,6 +657,44 @@ in
     ];
   };
 
+  ubootRadxaCM3IO = buildUBoot {
+    defconfig = "radxa-cm3-io-rk3566_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    BL31 = "${armTrustedFirmwareRK3568}/bl31.elf";
+    ROCKCHIP_TPL = rkbin.TPL_RK3566;
+    filesToInstall = [
+      "idbloader.img"
+      "u-boot.itb"
+      "u-boot-rockchip.bin"
+    ];
+  };
+
+  ubootRadxaZero3 = buildUBoot {
+    defconfig = "radxa-zero-3-rk3566_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    BL31 = "${armTrustedFirmwareRK3568}/bl31.elf";
+    ROCKCHIP_TPL = rkbin.TPL_RK3566;
+    filesToInstall = [
+      "idbloader.img"
+      "u-boot.itb"
+      "u-boot-rockchip.bin"
+    ];
+  };
+
+  ubootRock3C = buildUBoot {
+    defconfig = "rock-3c-rk3566_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    BL31 = "${armTrustedFirmwareRK3568}/bl31.elf";
+    ROCKCHIP_TPL = rkbin.TPL_RK3566;
+    filesToInstall = [
+      "idbloader.img"
+      "idbloader-spi.img"
+      "u-boot.itb"
+      "u-boot-rockchip.bin"
+      "u-boot-rockchip-spi.bin"
+    ];
+  };
+
   ubootRaspberryPi = buildUBoot {
     defconfig = "rpi_defconfig";
     extraMeta.platforms = [ "armv6l-linux" ];
