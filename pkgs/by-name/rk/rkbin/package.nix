@@ -23,8 +23,10 @@ stdenvNoCC.mkDerivation {
   '';
 
   passthru = {
+    BL31_RK3308 = "${rkbin}/bin/rk33/rk3308_bl31_v2.26.elf";
     BL31_RK3568 = "${rkbin}/bin/rk35/rk3568_bl31_v1.44.elf";
     BL31_RK3588 = "${rkbin}/bin/rk35/rk3588_bl31_v1.48.elf";
+    TPL_RK3308 = "${rkbin}/bin/rk33/rk3308_ddr_589MHz_uart2_m1_v2.10.bin";
     TPL_RK3566 = "${rkbin}/bin/rk35/rk3566_ddr_1056MHz_v1.23.bin";
     TPL_RK3568 = "${rkbin}/bin/rk35/rk3568_ddr_1056MHz_v1.23.bin";
     TPL_RK3588 = "${rkbin}/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin";
