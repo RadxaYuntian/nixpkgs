@@ -865,4 +865,28 @@ in
       "idbloader.img"
     ];
   };
+
+  ubootRockPiS = buildUBoot {
+    defconfig = "rock-pi-s-rk3308_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    ROCKCHIP_TPL = rkbin.TPL_RK3308;
+    BL31 = rkbin.BL31_RK3308;
+    filesToInstall = [
+      "u-boot.itb"
+      "idbloader.img"
+      "u-boot-rockchip.bin"
+    ];
+  };
+
+  ubootRockS0 = buildUBoot {
+    defconfig = "rock-s0-rk3308_defconfig";
+    extraMeta.platforms = [ "aarch64-linux" ];
+    ROCKCHIP_TPL = rkbin.TPL_RK3308;
+    BL31 = rkbin.BL31_RK3308;
+    filesToInstall = [
+      "u-boot.itb"
+      "idbloader.img"
+      "u-boot-rockchip.bin"
+    ];
+  };
 }

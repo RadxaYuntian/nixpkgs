@@ -11377,8 +11377,10 @@ with pkgs;
     ubootRock64
     ubootRock64v2
     ubootRockPiE
+    ubootRockPiS
     ubootRockPi4
     ubootRockPro64
+    ubootRockS0
     ubootROCPCRK3399
     ubootSheevaplug
     ubootSopine
