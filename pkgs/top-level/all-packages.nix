@@ -11380,7 +11380,10 @@ with pkgs;
     ubootRock3C
     ubootRock4CPlus
     ubootRock4SE
+    ubootRock5A
     ubootRock5ModelB
+    ubootRock5C
+    ubootRock5ITX
     ubootRock64
     ubootRock64v2
     ubootRockPiE
