@@ -11373,7 +11373,10 @@ with pkgs;
     ubootRaspberryPi4_64bit
     ubootRaspberryPiZero
     ubootRadxaCM3IO
+    ubootRadxaE25
     ubootRadxaZero3
+    ubootRock3A
+    ubootRock3B
     ubootRock3C
     ubootRock4CPlus
     ubootRock4SE
