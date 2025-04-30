@@ -11375,6 +11375,8 @@ with pkgs;
     ubootRaspberryPiZero
     ubootRadxaCM3IO
     ubootRadxaE25
+    ubootRadxaZero
+    ubootRadxaZero2
     ubootRadxaZero3
     ubootRock3A
     ubootRock3B

@@ -339,6 +339,40 @@ in
       '';
     };
 
+  ubootRadxaZero = assert stdenv.buildPlatform.system == "x86_64-linux";
+    buildUBoot {
+      defconfig = "radxa-zero_defconfig";
+      extraMeta.platforms = [ "aarch64-linux" ];
+      filesToInstall = [
+        "u-boot.bin"
+        "u-boot.bin.sd.bin"
+      ];
+      postBuild = ''
+        mv u-boot.bin u-boot.bin.raw
+
+        pushd ${buildPackages.amlogic-boot-fip}/bin
+        ./build-fip.sh radxa-zero $OLDPWD/u-boot.bin.raw $OLDPWD
+        popd
+      '';
+    };
+
+  ubootRadxaZero2 = assert stdenv.buildPlatform.system == "x86_64-linux";
+    buildUBoot {
+      defconfig = "radxa-zero2_defconfig";
+      extraMeta.platforms = [ "aarch64-linux" ];
+      filesToInstall = [
+        "u-boot.bin"
+        "u-boot.bin.sd.bin"
+      ];
+      postBuild = ''
+        mv u-boot.bin u-boot.bin.raw
+
+        pushd ${buildPackages.amlogic-boot-fip}/bin
+        ./build-fip.sh radxa-zero2 $OLDPWD/u-boot.bin.raw $OLDPWD
+        popd
+      '';
+    };
+
   ubootNanoPCT4 = buildUBoot rec {
     rkbin = fetchFromGitHub {
       owner = "armbian";
